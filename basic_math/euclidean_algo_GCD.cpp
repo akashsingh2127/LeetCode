@@ -16,11 +16,6 @@ int main(){
 
     return 0;
 }
-
-
-
-
-/*
 /*
 Euclidean Algorithm finds GCD using: GCD(a, b) = GCD(b, a % b).
 We repeatedly replace (maximum, minimum) with (minimum, maximum % minimum).
