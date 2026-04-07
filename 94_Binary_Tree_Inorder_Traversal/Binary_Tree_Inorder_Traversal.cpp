@@ -19,14 +19,14 @@ struct TreeNode {
 };
 
 void inorder(TreeNode* root, vector<int>& ans) {
-    if (root == NULL) return;
+    if (root == NULL) return;//base case (helps in backtracking)
 
-    inorder(root->left, ans);
-    ans.push_back(root->val);
-    inorder(root->right, ans);
+    inorder(root->left, ans);//traversal in leftmost node
+    ans.push_back(root->val);//pushing the values in the answer during the backtracking
+    inorder(root->right, ans);//traversal in the right most node
 }
 
-vector<int> inorderTraversal(TreeNode* root) {
+vector<int> inorderTraversal(TreeNode* root) {/*we also need an answer array so we will create a seperate function for traversal*/
     vector<int> ans;
     inorder(root, ans);
     return ans;

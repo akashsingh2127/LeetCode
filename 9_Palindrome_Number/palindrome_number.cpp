@@ -17,10 +17,9 @@ bool isPalindrome(long long x) {
 
     while (temp > 0) {
         int remainder = temp % 10;
-        newnum = (newnum * 10) + remainder;
+        newnum = (newnum * 10) + remainder;  //cretaes a palindrome number in a reverse order
         temp = temp / 10;
     }
-
     return newnum == x;
 }
 

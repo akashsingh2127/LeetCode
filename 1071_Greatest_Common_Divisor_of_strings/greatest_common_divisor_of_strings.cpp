@@ -13,7 +13,7 @@ int gcd(int n1, int n2){
     int maximum = max(n1, n2);
     int minimum = min(n1, n2);
 
-    while(minimum != 0){  
+    while(minimum != 0){  //most imp logic
         int remainder = maximum % minimum;     
         maximum = minimum;
         minimum = remainder;        
