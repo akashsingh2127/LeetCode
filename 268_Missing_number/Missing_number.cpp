@@ -33,3 +33,18 @@ int main() {
 
     return 0;
 }
+
+
+/*this problem could have also been done using XOR which i would say the best approach for this
+int missingNumber(vector<int>& nums) {
+    int n = nums.size();
+    int xorr = n;  // start with n
+
+    for (int i = 0; i < n; i++) {
+        xorr ^= i;        // XOR index
+        xorr ^= nums[i];  // XOR value
+    }
+
+    return xorr;
+}
+*/
