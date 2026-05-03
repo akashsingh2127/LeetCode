@@ -80,7 +80,7 @@ int main() {
 /*I used recursion for the traversal and the challenge i faced was aligning the indexes of the column and rows and to also mind it doesn't consider duplicacy. That took a bit of time and focus............
 
 
-another easy method would be without recursion
+Alternative easy method would be without recursion
 
 vector<int> spiralOrder(vector<vector<int>>& matrix) {
     int m = matrix.size(), n = matrix[0].size();
@@ -111,7 +111,6 @@ vector<int> spiralOrder(vector<vector<int>>& matrix) {
             left++;
         }
     }
-
     return ans;
 }
 
