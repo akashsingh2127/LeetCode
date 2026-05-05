@@ -58,8 +58,10 @@ int main() {
         }
         cout << endl;
     }
-
     return 0;
 }
+
+/*The challenge i faced was i was using ncr(i, j+1) instead of ncr(i-1,j).   and be carefull while calculating the ncr*/
+
 
 
