@@ -38,7 +38,7 @@ public:
                     ans.push_back(nums[j]);
                     ans.push_back(nums[high]);
                     vec.push_back(ans);  
-                    while(start<high && nums[start]==s){//if same element appears for two pointer then (start) pass
+                    while(start<high && nums[start]==s){//if same element appears for two pointer then (start) ass
                         start++;
                     }   
 
