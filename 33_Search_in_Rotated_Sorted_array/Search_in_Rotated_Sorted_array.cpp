@@ -14,20 +14,16 @@ int searchElement(vector<int>& nums, int target) {
 
     while (start <= end) {
         int mid = start + (end - start) / 2;
-
         if (nums[mid] == target) {
             return mid;
         }
-
-        
         if (nums[start] <= nums[mid]) {// shows left half is sorted and we will be checking in the left half
             if (target >= nums[start] && target < nums[mid]) {//if probable found in left half
                 end = mid - 1;
             } else {//start while loop for the right half
                 start = mid + 1;
             }
-        }
-        
+        }    
         else {// shows right half is sorted and we will be checking in the right half
             if (target > nums[mid] && target <= nums[end]) {//if probable found in right half
                 start = mid + 1;
@@ -36,10 +32,8 @@ int searchElement(vector<int>& nums, int target) {
             }
         }
     }
-
     return -1;
 }
-
 int main() {
     int n, target;
     cin >> n >> target;
@@ -55,8 +49,6 @@ int main() {
 
     return 0;
 }
-
-
 
 /* The challenge i faced was that i wasn't able to combine the logic for rotated and not rotated array in a single loop.  but we need to understand the logic is exact same as the binary search.
 */
