@@ -27,6 +27,35 @@ public:
     }
 };
 
+
+/*       OR        
+class Solution {
+public:
+    int findMin(vector<int>& nums) {
+        int start=0,end=nums.size()-1;
+        while(start < end){
+
+    int mid = start + (end - start)/2;
+
+    if(nums[start] <= nums[mid] &&
+       nums[mid] <= nums[end]){
+        return nums[start];
+    }
+
+    else if(nums[start] <= nums[mid] &&
+            nums[mid] > nums[end]){
+        start = mid + 1;
+    }
+
+    else{
+        end = mid;
+    }
+}
+        }           
+};
+
+*/
+
 int main() {
 
     Solution s;
@@ -40,6 +69,6 @@ int main() {
 }
 
 
-/* Initially i was wiriting unnecessary conditions in the if and elseif and which was like (nums[start] > nums[mid] && nums[mid]) > nums[end] but only cond i needed was (nums[mid]>nums[end])... because of which my code was getting confused in some of the cases and giving some garbage value.......
+/* Initially i was wiriting unnecessary conditions in the if and elseif and which was like (nums[start] > nums[mid] && nums[mid]) > nums[end] but only cond i needed was (nums[mid]>nums[end])... 
 Secondly, make sure unlike the other roatetd sorted array problems don't do (start<=end) in the while loop this will lead to wrong answer e.g. [3,1,2].....
 Thirdly, we r dealing with the third condition outside the while loop but i was trying to cover it inside the loop itself whihc led to some Return error...*/
