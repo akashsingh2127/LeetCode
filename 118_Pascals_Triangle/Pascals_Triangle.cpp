@@ -24,7 +24,6 @@ public:
             den *= k;
             k++;
         }
-
         return num / den;
     }
 
